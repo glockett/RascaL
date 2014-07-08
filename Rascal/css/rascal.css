@@ -20,6 +20,10 @@
 .color-red {color: #FF0000;}
 .error-message {font-size: 10px;}
 
+.progress-bar-success{
+    width: 400px;
+}
+
 @media screen and (min-width: 30em ) {
     .form-panel-width { width: 100%; }
 }
