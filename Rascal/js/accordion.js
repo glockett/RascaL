@@ -142,3 +142,17 @@ $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
     menu.css({ left:newpos });
 
 });
+
+/* working progress bar example */
+var progress = setInterval(function() {
+    var $bar = $('.progress-bar');
+
+    if ($bar.width()==400) {
+        clearInterval(progress);
+        $('.progress').removeClass('active');
+    } else {
+        $bar.width($bar.width()+4);
+    }
+    $bar.text(parseInt($bar.width()/4) + "%");
+}, 1);
+
