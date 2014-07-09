@@ -27,6 +27,7 @@
     <script src="js/jquery-ui.js"></script>
     <script src="js/jquery-ui-min.js"></script>
     <script src="js/dropdown.js"></script>
+    <script src="js/tab.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/accordion.js"></script>
@@ -40,6 +41,7 @@
 </div>
 <header>
     <img src="img/rascal_Logo.gif" alt="RASCAL">
+
     <h1>Rascal - R[our] SCALA Test Automation Framework</h1>
 </header>
 <!--[if lt IE 7]>
@@ -86,10 +88,11 @@
     <!-- /.container-fluid -->
 </nav>
 <content>
-<h3>Test in progress</h3>
 
-<div class="container">
-    <div class="progress progress-striped progress-bar-success active">
+
+<div class="container"><h3>Test in progress</h3>
+
+    <div class="progress progress-striped progress-bar-success active pull-left">
         <div class="progress-bar" style="width: 0%;"></div>
     </div>
 </div>
@@ -115,59 +118,84 @@
     <div id="collapse1" class="panel-collapse collapse">
         <div class="panel-body">
             <h3 class="success"> SUCCESS - ALL TESTS PASSED</h3>
+            <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
-                <li class="active"><a href="#">Summary</a></li>
+                <li class="active"><a href="#summary" role="tab" data-toggle="tab">Summary</a></li>
+                <li><a href="#tests" role="tab" data-toggle="tab">Tests</a></li>
+                <li><a href="#screenshots" role="tab" data-toggle="tab">Screenshots</a></li>
+
             </ul>
-            <img class="pull-right" src="img/thumbs_up.gif" alt="thumbs_up">
-            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-                moon
-                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                3
-                wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffe.</p>
-            <ol>
-                <li class="success">Scenario: Add a new top level comment to an article | PASSED</li>
-                <ul>
-                    <li> "GIVEN I am Registered Member and signed into NGW"</li>
-                    <li>"WHEN I view comments on an article"</li>
-                    <li>"THEN I can post a new comment"</li>
-                </ul>
-                <li class="success">Scenario: Reply to a top level comment | PASSED</li>
-                <ul>
-                    <li> "GIVEN I am Registered Member and signed into NGW"</li>
-                    <li>"WHEN I view comments on an article"</li>
-                    <li>"THEN I can post a new comment"</li>
-                </ul>
-                <li class="success">Scenario: Pick a comment to be Featured | PASSED</li>
-                <ul>
-                    <li> "GIVEN I am Registered Member and signed into NGW"</li>
-                    <li>"WHEN I view comments on an article"</li>
-                    <li>"THEN I can post a new comment"</li>
-                </ul>
-                <li class="success">Scenario: View a users discussion posts | PASSED</li>
-                <ul>
-                    <li> "GIVEN I am Registered Member and signed into NGW"</li>
-                    <li>"WHEN I view comments on an article"</li>
-                    <li>"THEN I can post a new comment"</li>
-                </ul>
-                <li class="success">Scenario: Report a comment | PASSED</li>
-                <ul>
-                    <li> "GIVEN I am Registered Member and signed into NGW"</li>
-                    <li>"WHEN I view comments on an article"</li>
-                    <li>"THEN I can post a new comment"</li>
-                </ul>
-                <li class="success">>Scenario: Navigate through comment pages | PASSED</li>
-                <ul>
-                    <li> "GIVEN I am Registered Member and signed into NGW"</li>
-                    <li>"WHEN I view comments on an article"</li>
-                    <li>"THEN I can post a new comment"</li>
-                </ul>
-                <li class="success">Scenario: Recommend a users comment | PASSED</li>
-                <ul>
-                    <li> "GIVEN I am Registered Member and signed into NGW"</li>
-                    <li>"WHEN I view comments on an article"</li>
-                    <li>"THEN I can post a new comment"</li>
-                </ul>
-            </ol>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="summary"><img class="pull-right" src="img/thumbs_up.gif"
+                                                               alt="thumbs_up">
+
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                        wolf
+                        moon
+                        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                        Brunch
+                        3
+                        wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffe.</p></div>
+
+                <div class="tab-pane" id="tests">
+                    <h3>Test steps</h3>
+                    <p>Below is a list of steps used by the tests:</p>
+                    <ol>
+                        <li class="success">Scenario: Add a new top level comment to an article | PASSED</li>
+                        <ul>
+                            <li> "GIVEN I am Registered Member and signed into NGW"</li>
+                            <li>"WHEN I view comments on an article"</li>
+                            <li>"THEN I can post a new comment"</li>
+                        </ul>
+                        <li class="success">Scenario: Reply to a top level comment | PASSED</li>
+                        <ul>
+                            <li> "GIVEN I am Registered Member and signed into NGW"</li>
+                            <li>"WHEN I view comments on an article"</li>
+                            <li>"THEN I can post a new comment"</li>
+                        </ul>
+                        <li class="success">Scenario: Pick a comment to be Featured | PASSED</li>
+                        <ul>
+                            <li> "GIVEN I am Registered Member and signed into NGW"</li>
+                            <li>"WHEN I view comments on an article"</li>
+                            <li>"THEN I can post a new comment"</li>
+                        </ul>
+                        <li class="success">Scenario: View a users discussion posts | PASSED</li>
+                        <ul>
+                            <li> "GIVEN I am Registered Member and signed into NGW"</li>
+                            <li>"WHEN I view comments on an article"</li>
+                            <li>"THEN I can post a new comment"</li>
+                        </ul>
+                        <li class="success">Scenario: Report a comment | PASSED</li>
+                        <ul>
+                            <li> "GIVEN I am Registered Member and signed into NGW"</li>
+                            <li>"WHEN I view comments on an article"</li>
+                            <li>"THEN I can post a new comment"</li>
+                        </ul>
+                        <li class="success">>Scenario: Navigate through comment pages | PASSED</li>
+                        <ul>
+                            <li> "GIVEN I am Registered Member and signed into NGW"</li>
+                            <li>"WHEN I view comments on an article"</li>
+                            <li>"THEN I can post a new comment"</li>
+                        </ul>
+                        <li class="success">Scenario: Recommend a users comment | PASSED</li>
+                        <ul>
+                            <li> "GIVEN I am Registered Member and signed into NGW"</li>
+                            <li>"WHEN I view comments on an article"</li>
+                            <li>"THEN I can post a new comment"</li>
+                        </ul>
+                    </ol>
+                </div>
+
+                <div class="tab-pane" id="screenshots">
+                    <h3>Screenshots here:</h3>
+                    <p>A list of screenshots will appear here:</p>
+                </div>
+
+            </div>
+
+
         </div>
     </div>
 </div>
@@ -189,8 +217,10 @@
             <h3 class="success"> SUCCESS - ALL TESTS PASSED</h3>
             <ul class="nav nav-tabs" role="tablist">
                 <li class="active"><a href="#">Summary</a></li>
+                <li><a href="#">Tests</a></li>
             </ul>
             <img class="pull-right" src="img/thumbs_up_small.gif" alt="thumbs_up">
+
             <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
                 moon
                 officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
@@ -261,9 +291,11 @@
                 <h3 class="fail"> ERROR - TESTS FAILED</h3>
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="active"><a href="#">Summary</a></li>
+                    <li><a href="#">Tests</a></li>
                     <li><a href="#">Screenshots</a></li>
                 </ul>
                 <img class="pull-right" src="img/thumbs_down.gif" alt="thumbs_down">
+
                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
                     wolf
                     moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
@@ -336,8 +368,10 @@
                 <h3 class="success"> SUCCESS - ALL TESTS PASSED</h3>
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="active"><a href="#">Summary</a></li>
+                    <li><a href="#">Tests</a></li>
                 </ul>
                 <img class="pull-right" src="img/thumbs_up.gif" alt="thumbs_up">
+
                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
                     wolf
                     moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
@@ -410,8 +444,10 @@
                 <h3 class="success"> SUCCESS - ALL TESTS PASSED</h3>
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="active"><a href="#">Summary</a></li>
+                    <li><a href="#">Tests</a></li>
                 </ul>
                 <img class="pull-right" src="img/thumbs_up.gif" alt="thumbs_up">
+
                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
                     wolf
                     moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
@@ -484,8 +520,10 @@
                 <h3 class="success"> SUCCESS - ALL TESTS PASSED</h3>
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="active"><a href="#">Summary</a></li>
+                    <li><a href="#">Tests</a></li>
                 </ul>
                 <img class="pull-right" src="img/thumbs_up.gif" alt="thumbs_up">
+
                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
                     wolf
                     moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
@@ -558,8 +596,10 @@
                 <h3 class="success"> SUCCESS - ALL TESTS PASSED</h3>
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="active"><a href="#">Summary</a></li>
+                    <li><a href="#">Tests</a></li>
                 </ul>
                 <img class="pull-right" src="img/thumbs_up.gif" alt="thumbs_up">
+
                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
                     wolf
                     moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
@@ -631,8 +671,10 @@
             <h3 class="success"> SUCCESS - ALL TESTS PASSED</h3>
             <ul class="nav nav-tabs" role="tablist">
                 <li class="active"><a href="#">Summary</a></li>
+                <li><a href="#">Tests</a></li>
             </ul>
             <img class="pull-right" src="img/thumbs_up.gif" alt="thumbs_up">
+
             <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
                 moon
                 officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
